@@ -25,7 +25,20 @@ def index():
 
     user_city = location_info['city']
 
-    
+    date = astro_data['date']
+
+    sunrise = astro_data['sunrise']
+
+    sunset = astro_data['sunset']
+
+    solar_noon = astro_data['solar_noon']
+
+    day_length = astro_data['day_length']
+
+    moonrise = astro_data['moonrise']
+
+    moonset = astro_data['moonset']
+
 
 
     return "Hello World"
