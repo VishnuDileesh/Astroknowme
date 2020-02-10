@@ -38,6 +38,24 @@ def astro_check():
 
     moonset = astro_data['moonset']
 
+    data = {
+
+            'ip': user_ip,
+            'country': user_country,
+            'state': user_state,
+            'district': user_district,
+            'city': user_city,
+            'date': date,
+            'sunrise': sunrise,
+            'sunset': sunset,
+            'solar_noon': solar_noon,
+            'day_length': day_length,
+            'moonrise': moonrise,
+            'moonset': moonset
+    }
+
+    return data
+
 
 
 
