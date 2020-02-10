@@ -9,9 +9,23 @@ def index():
 
     #ip = request.remote_addr
 
-    r = requests.get('https://api.ipgeolocation.io/astronomy?apiKey=' + API_KEY + '&ip=' + IP)
+    astro_data = requests.get('https://api.ipgeolocation.io/astronomy?apiKey=' + API_KEY + '&ip=' + IP).json()
 
-    print(r.content)
+
+
+    location_info = astro_data['location']
+
+    user_ip = location_info['ip']
+
+    user_country = location_info['country_name']
+
+    user_state = location_info['state_prov']
+
+    user_district = location_info['district']
+
+    user_city = location_info['city']
+
+    
 
 
     return "Hello World"
