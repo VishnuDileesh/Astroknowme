@@ -1,0 +1,17 @@
+html{
+	background-color: #F2BB6D;
+}
+
+h1{
+	color: white;
+}
+
+.info{
+	display: flex;
+	justify-content: space-between;
+}
+
+.infoc{
+	display: flex;
+	justify-content: center;
+}
