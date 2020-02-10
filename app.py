@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template
-from config import API_KEY, IP
+from config import API_KEY
 import requests
 
 app = Flask(__name__)
 
 def astro_check():
 
-    #ip = request.remote_addr
+    IP = request.remote_addr
 
     astro_data = requests.get('https://api.ipgeolocation.io/astronomy?apiKey=' + API_KEY + '&ip=' + IP).json()
 
