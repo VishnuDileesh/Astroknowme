@@ -1,11 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from config import API_KEY, IP
 import requests
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
+def astro_check():
 
     #ip = request.remote_addr
 
@@ -41,6 +40,13 @@ def index():
 
 
 
-    return "Hello World"
+
+
+@app.route('/')
+def index():
+
+    data = astro_check()
+
+    return render_template('index.html', data=data)
 
 
